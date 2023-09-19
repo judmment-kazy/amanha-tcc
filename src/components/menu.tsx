@@ -24,6 +24,8 @@ export default async function Menu() {
 
     const user = await getCurrentUser();
 
+    const nome = user?.name;
+
     return (
         <div>
             <DropdownMenu>
@@ -33,10 +35,10 @@ export default async function Menu() {
                 <DropdownMenuContent className="bg-gradient-to-t from-cianinho to-rosinha border-[6px] dark:from-DarkMenuColor dark:to-DarkMenuColor">
                     <button className="flex items-center">
                     <Avatar>
-                        <AvatarImage src="fr.jpg" alt="@shadcn"/>
-                        <AvatarFallback>CN</AvatarFallback>
+                        <AvatarImage src="" alt="@shadcn"/>
+                        <AvatarFallback>ᕕ(ᐛ)ᕗ</AvatarFallback>
                     </Avatar>
-                    <DropdownMenuLabel className="text-[2rem]">Flash reverso</DropdownMenuLabel>
+                    <DropdownMenuLabel className="text-[2rem]">{user?.name}</DropdownMenuLabel>
                     </button>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem className="text-[2rem]"><a href="/config">Configurações</a></DropdownMenuItem>

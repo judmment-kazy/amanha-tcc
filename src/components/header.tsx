@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Courgette } from 'next/font/google'
 import Menu from '@/components/menu'
-import { useTheme } from "next-themes"
+import { ThemeButton } from '@/components/theme-button';
 
 const courgette = Courgette({
     subsets: ['latin'],
@@ -9,8 +9,6 @@ const courgette = Courgette({
 })
 
 export function Header() {
-    
-    // const { setTheme } = useTheme()
 
     return (
         <div className='justify-center select-none'>
@@ -44,14 +42,9 @@ export function Header() {
                             </li>
 
                             {/* mudar tema do site */}
-                            {/* <li className="hidden md:flex text-black text-[2.5rem] hover:text-red-500 cursor-pointer">
-                                <button onClick={() => setTheme("dark")} className='dark:text-[0]'>
-                                    <i className="fa-solid fa-sun"></i>
-                                </button>
-                                <button onClick={() => setTheme("light")} className='text-[0px] dark:text-[45px] dark:flex'>
-                                    <i className="fa-solid fa-moon text-DarkTextColor"></i>     
-                                </button>
-                            </li> */}
+                            <li className="hidden md:flex text-black text-[2.5rem] hover:text-red-500 cursor-pointer">
+                                <ThemeButton />
+                            </li>
 
                             {/* Menu */}
                             <li>
