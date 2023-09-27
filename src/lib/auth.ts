@@ -3,7 +3,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { db } from "@/lib/db";
 import { db as prisma } from "@/lib/db";
-import bcrypt from "bcrypt";
 
 export const authOptions : NextAuthOptions = {
     adapter: PrismaAdapter(db as any),
@@ -11,11 +10,12 @@ export const authOptions : NextAuthOptions = {
         CredentialsProvider({
             name:"credentials",
             credentials:{
-                    email: {label: "Email", type: "text"},
-                    password: {label: "Password", type: "password"},
-                    username: {label: "Name", type: "text"},
+                email: {label: "Email", type: "text"},
+                password: {label: "Password", type: "password"},
+                username: {label: "Name", type: "text"},
             },
             async authorize(credentials, req) : Promise<any>{
+                const bcrypt = require('bcrypt');
 
                 console.log("Authorize method", credentials)
                 
