@@ -63,15 +63,15 @@ export default function Slider() {
                     </p>
                   </div>
                 </AlertDialogTrigger>
-                <AlertDialogContent className='border-rosinha border-4 bg-gray-100 dark:bg-slate-800 dark:border-cianinho'>
+                <AlertDialogContent className='bg-white dark:bg-slate-800 shadow-3xl'>
                   <div className='text-center flex flex-col justify-center items-center select-none'>
                     <AlertDialogCancel className='absolute top-4 right-4 text-2xl font-sans hover:scale-[1.05] transition-transform'>X</AlertDialogCancel>
                     <Image src={url} width={200} height={200} alt={text} className='w-[200px] h-[200px] sm:w-[290px] sm:h-[290px] rounded-[100%] border-4 border-rosinha dark:border-cianinho' />
                     <AlertDialogTitle className='text-3xl font-sans'>{text}</AlertDialogTitle>
                     <AlertDialogDescription className='text-xl'>{desc}</AlertDialogDescription>
-                    <AlertDialogDescription className='text-3xl text-cyan-300'>R$: {preco}</AlertDialogDescription>
-                    <button className="gap-[1.5rem] flex flex-wrap mt-4 justify-center flex-grow bg-[linear-gradient(144deg,#AF40FF,#5B42F3_50%,#00DDEB)] shadow-[rgba(151,65,252,0.2)_0_15px_30px_-5px] box-border text-white items-center text-xl w-[90%] min-w-[140px] no-underline select-none touch-manipulation whitespace-nowrap cursor-pointer p-[3px] rounded-lg border-0"><a href="#" className='bg-[rgb(5,6,45)] w-full h-full transition-[300ms] px-6 py-4 rounded-md hover:bg-transparent'>Comprar</a></button>
-                    <button className="gap-[1.5rem] flex flex-wrap mt-4 justify-center flex-grow bg-[linear-gradient(144deg,#AF40FF,#5B42F3_50%,#00DDEB)] shadow-[rgba(151,65,252,0.2)_0_15px_30px_-5px] box-border text-white items-center text-xl w-[90%] min-w-[140px] no-underline select-none touch-manipulation whitespace-nowrap cursor-pointer p-[3px] rounded-lg border-0"><a href="#" className="bg-[rgb(5,6,45)] w-full h-full transition-[300ms] px-6 py-4 rounded-md hover:bg-transparent">Adicionar ao carrinho</a></button>
+                    <AlertDialogDescription className='text-2xl text-black-300'>R$: {preco}</AlertDialogDescription>
+                    <button className="gap-[1.5rem] flex flex-wrap mt-4 justify-center flex-grow bg-gradient-to-br from-#ffc2cc to-#add8e6 dark:bg-[linear-gradient(144deg,#AF40FF,#5B42F3_50%,#00DDEB)] shadow-[rgba(151,65,252,0.2)_0_15px_30px_-5px] box-border text-white items-center text-xl w-[90%] min-w-[140px] no-underline select-none touch-manipulation whitespace-nowrap cursor-pointer p-[3px] rounded-lg border-0"><a href="#" className='bg-gray-100 text-black hover:text-white w-full h-full transition-[300ms] px-6 py-4 rounded-md hover:bg-transparent'>Comprar</a></button>
+                    <button className="gap-[1.5rem] flex flex-wrap mt-4 justify-center flex-grow bg-gradient-to-br from-#ffc2cc to-#add8e6 dark:bg-[linear-gradient(144deg,#AF40FF,#5B42F3_50%,#00DDEB)] shadow-[rgba(151,65,252,0.2)_0_15px_30px_-5px] box-border text-white items-center text-xl w-[90%] min-w-[140px] no-underline select-none touch-manipulation whitespace-nowrap cursor-pointer p-[3px] rounded-lg border-0"><a href="#" className="bg-gray-100 text-black hover:text-white w-full h-full transition-[300ms] px-6 py-4 rounded-md hover:bg-transparent">Adicionar ao carrinho</a></button>
                   </div>
                 </AlertDialogContent>
               </AlertDialog>

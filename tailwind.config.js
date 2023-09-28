@@ -84,7 +84,10 @@ module.exports = {
         "gradient-aah": "linear-gradient(to bottom, hsl(350, 100%, 88%), #add8e6)",
       },
       dropShadow: {
-        '3xl': '0px 10px 5px rgba(0, 0, 0, 0.4)'
+        '3xl': '0px 10px 5px rgba(0, 0, 0, 0.4)',
+      },
+      boxShadow: {
+        '3xl': '0 10px 100px -0px rgba(0, 0, 0, .7)',
       }
     },
   },
