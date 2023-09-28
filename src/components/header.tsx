@@ -25,7 +25,7 @@ export function Header() {
                         <ul className="flex items-center gap-[1em] lg:gap-[1.7em] xl:gap-[2em]">
                             {/* sobre nosso projeto */}
                             <li>
-                                <a className="hidden md:flex text-[1.5em] lg:text-[1.7em] xl:text-[2rem] text-slate-500 hover:text-red-500 cursor-pointer dark:text-DarkTextColor">Sobre</a>
+                                <a className="hidden md:flex text-[1.5em] lg:text-[1.7em] xl:text-[2rem] text-slate-500 hover:text-red-500 cursor-pointer dark:text-DarkTextColor" href='/about'>Sobre</a>
                             </li>
 
                             {/* Nossos contatos */}

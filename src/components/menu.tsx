@@ -37,7 +37,7 @@ export default async function Menu() {
                 <DropdownMenuTrigger>
                     <i className="fa-solid fa-bars text-black text-[2.5rem] hover:text-red-500 cursor-pointer dark:text-DarkTextColor"></i>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-gradient-to-t from-cianinho to-rosinha border-[6px] dark:from-DarkMenuColor dark:to-DarkMenuColor">
+                <DropdownMenuContent className="bg-gradient-to-t from-cianinho to-rosinha border-[6px] dark:from-DarkMenuColor dark:to-DarkMenuColor px-2 pb-6">
                     <button>
                         {isAuthenticated ? (
                             <div className="flex items-center">
@@ -48,16 +48,17 @@ export default async function Menu() {
                                 <DropdownMenuLabel className="text-[2rem]">{user?.name}</DropdownMenuLabel>
                                 <DropdownMenuSeparator />
                             </div>
-
                         ) : (
                             <div />
                         )}
                     </button>
-                    <DropdownMenuItem className="text-[2rem]"><a href="/config">Configurações</a></DropdownMenuItem>
-                    <DropdownMenuItem className="text-[2rem]">Historico de compra</DropdownMenuItem>
-                    <DropdownMenuItem className="text-[2rem]">Carrinho</DropdownMenuItem>
+                    <a href="/config"><DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70]">Configurações</DropdownMenuItem></a>
+                    <DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70]">Historico de compras</DropdownMenuItem>
+                    <DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70]">Carrinho</DropdownMenuItem>
+                    <a href="https://instagram.com/lg_trufadasso"><DropdownMenuItem className="flex md:hidden text-[2rem] hover:bg-[#ffffff70]">Contato</DropdownMenuItem></a>
+                    <a href="/about"><DropdownMenuItem className="flex md:hidden text-[2rem] hover:bg-[#ffffff70]">Sobre</DropdownMenuItem></a>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem className="text-[2rem]">
+                    <DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70]">
                         <AuthButton page="login" />
                     </DropdownMenuItem>
                 </DropdownMenuContent>
