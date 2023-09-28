@@ -20,14 +20,14 @@ import {
 
 export default function Slider() {
   return (
-    <main className="w-full">
+    <main className="w-full max-w-[1290px] flex items-center justify-center">
       <Swiper
         id='mySlider'
         className="mySwiper"
         loop={true}
         mousewheel={true}
         slidesPerView={1}
-        centeredSlides={false}
+        centeredSlides={true}
         spaceBetween={50}
         centeredSlidesBounds={true}
         autoplay={{
@@ -50,8 +50,8 @@ export default function Slider() {
           ['/cone_oreo.png', 'Cone de Oreo', "Um apetitoso cone trufado contendo um sabor inconfundível da bolacha Oreo, uma verdadeira delícia.", "10.00"],
           ['/cone_banana.png', 'Cone de Banana', "Divertido cone trufado repleto de confeitos coloridos, uma experiência alegre e saborosa.", "10.00"],
         ].map(([url, text, desc, preco], index) => (
-          <SwiperSlide key={index}>
-            <section className="w-full h-[500px] flex flex-col items-center justify-center gap-4 drop-shadow-3xl bg-gradient-to-t from-cianinho to-rosinha rounded-2xl select-none cursor-grab dark:from-DarkMenuColor dark:to-DarkMenuColor">
+          <SwiperSlide key={index} className='max-w-[400px]'>
+            <section className="w-full max-w-[400px] h-[500px] flex flex-col items-center justify-center gap-4 drop-shadow-3xl bg-gradient-to-t from-cianinho to-rosinha rounded-2xl select-none cursor-grab dark:from-DarkMenuColor dark:to-DarkMenuColor">
               <AlertDialog>
                 <AlertDialogTrigger className='flex flex-col items-center justify-between gap-12'>
                   <div>
