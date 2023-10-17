@@ -38,7 +38,7 @@ export function Header() {
 
                             {/* icone de carrinho */}
                             <li className="hidden md:flex text-black text-[2.5rem] hover:text-red-500 cursor-pointer dark:text-DarkTextColor">
-                                <i className="fa-solid fa-cart-shopping"></i>
+                                <a href="/cart"><i className="fa-solid fa-cart-shopping"></i></a>
                             </li>
 
                             {/* mudar tema do site */}
