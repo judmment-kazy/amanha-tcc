@@ -4,7 +4,7 @@ import { Playfair_Display } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import AuthProvider from '@/components/ui/auth-provider'
 import CartProvider from '../../providers/CartProvider'
-import { Toaster } from 'react-hot-toast'
+import { Toaster } from '@/components/ui/toaster'
 
 const playfair = Playfair_Display({ subsets: ['latin'] })
 
@@ -25,12 +25,6 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/logo pro.png"></link>
       </head>
       <body className='bg-gradient-to-b from-cianinho to-rosinha dark:from-DarkBgColor dark:to-DarkBgColor'>
-        <Toaster toastOptions={{
-          style: {
-            background: 'rgb(51 65 85)',
-            color: '#fff'
-          }
-        }}></Toaster>
           <CartProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Toaster />

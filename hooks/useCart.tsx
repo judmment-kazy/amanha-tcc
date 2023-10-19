@@ -1,6 +1,7 @@
 import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { toast } from 'react-hot-toast';
+import { useToast } from "@/components/ui/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 type CartContextType = {
     cartTotalQty: number;
@@ -20,6 +21,8 @@ interface Props {
 }
 
 export const CartContextProvider = (props: Props) => {
+
+    const { toast } = useToast();
     const [cartTotalQty, setCartTotalQty] = useState(0);
     const [cartProducts, setCartProducts] = useState<CartProductType[] | null>(null);
     const [cartTotalAmount, setCartTotalAmount] = useState(0);
@@ -60,7 +63,7 @@ export const CartContextProvider = (props: Props) => {
                 updatedCart = [product]
             }
 
-            toast.success("Product added to cart!")
+            toast({title: "Sucesso!", description: "Seu produto foi adicionado ao carrinho", variant: "destructive",})
             localStorage.setItem('eShopCartItems', JSON.stringify(updatedCart))
             return updatedCart;
         })
@@ -70,7 +73,7 @@ export const CartContextProvider = (props: Props) => {
         if (cartProducts) {
             const filteredProducts = cartProducts.filter((item) => { return item.id !== product.id })
             setCartProducts(filteredProducts)
-            toast.success("Product removed")
+            toast({title: "Sucesso!", description: "Seu produto foi removido do carrinho", variant: "destructive",})
             localStorage.setItem('eShopCartItems', JSON.stringify(filteredProducts))
         }
     }, [cartProducts])
@@ -79,7 +82,8 @@ export const CartContextProvider = (props: Props) => {
         let updatedCart;
 
         if (product.quantity === 99) {
-            return toast.error('Oooops! Maximum reached')
+            
+            return toast({title: "Ooooops!", description: "Maximo de produtos adicionados!", variant: "destructive",})
         }
 
         if (cartProducts) {
@@ -100,7 +104,8 @@ export const CartContextProvider = (props: Props) => {
         let updatedCart;
 
         if (product.quantity === 1) {
-            return toast.error('Oooops! Minimum reached')
+            
+            return toast({title: "Ooooops!", description: "Minimo de produtos no carrinho!", variant: "destructive",})
         }
 
         if (cartProducts) {

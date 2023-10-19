@@ -1,7 +1,6 @@
 'use client'
 import { useCart } from "../../../hooks/useCart";
 import Link from "next/link";
-import { MdArrowBack } from "react-icons/md";
 import Heading from "@/components/Heading";
 import Button from "@/components/Button";
 import ItemContent from "./ItemContent";
@@ -16,7 +15,6 @@ const CartClient = () => {
                 <div className="text-2xl">Your cart is empty.</div>
                 <div>
                     <Link href={"/"} className="text-slate-500 flex items-center gap-1 mt-2">
-                        <MdArrowBack />
                         <span>Start Shopping</span>
                     </Link>
                 </div>
@@ -50,7 +48,6 @@ const CartClient = () => {
                     <p className="text-slate-500">Taxes and shipping calculate at checkout</p>
                     <Button label="Checkout" onClick={() => { }} />
                     <Link href={"/"} className="text-slate-500 flex items-center gap-1 mt-2">
-                        <MdArrowBack />
                         <span>Continue Shopping</span>
                     </Link>
                 </div>
