@@ -63,7 +63,7 @@ export const CartContextProvider = (props: Props) => {
                 updatedCart = [product]
             }
 
-            toast({title: "Sucesso!", description: "Seu produto foi adicionado ao carrinho", variant: "destructive",})
+            toast({title: "Sucesso!", description: "Seu produto foi adicionado ao carrinho"})
             localStorage.setItem('eShopCartItems', JSON.stringify(updatedCart))
             return updatedCart;
         })
@@ -73,7 +73,7 @@ export const CartContextProvider = (props: Props) => {
         if (cartProducts) {
             const filteredProducts = cartProducts.filter((item) => { return item.id !== product.id })
             setCartProducts(filteredProducts)
-            toast({title: "Sucesso!", description: "Seu produto foi removido do carrinho", variant: "destructive",})
+            toast({title: "Sucesso!", description: "Seu produto foi removido do carrinho"})
             localStorage.setItem('eShopCartItems', JSON.stringify(filteredProducts))
         }
     }, [cartProducts])

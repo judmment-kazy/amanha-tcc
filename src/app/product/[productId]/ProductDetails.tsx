@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import ProductImage from "@/components/products/ProductImage";
 import { Footer } from "@/components/footer";
+import { Headers } from "@/components/headers";
+import Menu from "@/components/menu";
 
 interface ProductDetailsProps {
     product: any
@@ -56,37 +58,35 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
     return (
         <>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <ProductImage cartProduct={CartProduct} product={product} />
-            <div className="flex flex-col gap-1 text-slate-500 text-sm">
-                <h2 className="text-3xl font-medium text-slate-700">{product.name}</h2>
-                <div className="flex items-center gap-2"></div>
-                <Horizontal />
-                <div className="text-justify">{product.description}</div>
-                <Horizontal />
-                <div><span className="font-semibold">CATEGORY: </span>{product.category}</div>
-                <div><span className="font-semibold">BRAND: </span>{product.brand}</div>
-                <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "In stock" : "Out of stock"}</div>
-                <Horizontal />
-                {isProductInCart ? <>
-                    <p className="mb-2 text-slate-500 flex items-center gap-1">
-                        <span>Product added to cart</span>
-                    </p>
-                    <div className="max-w-[300px]">
-                        <Button label="View Cart" outline onClick={() => { router.push("/cart") }} />
-                    </div>
-                </> : <>
+            <Headers />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-slate-400 my-[50px] p-[10px] py-[50px] rounded-2xl border-4 ">
+                <ProductImage cartProduct={CartProduct} product={product} />
+                <div className="flex flex-col gap-[25px] text-white text-lg">
+                    <h2 className="text-5xl font-bold text-white">{product.name}</h2>
+                    <div className="flex items-center gap-2"></div>
                     <Horizontal />
-                    <SetQuantity cartProduct={CartProduct} handleQtyIncrease={handleQtyIncrease} handleQtyDecrease={handleQtyDecrease} />
-                    <Horizontal />
-                    <div className="max-w-[300px]">
-                        <Button label="Add To Cart" onClick={() => handleAddProductToCart(CartProduct)} />
-                    </div>
-                </>}
+                    <div className="text-justify">{product.description}</div>
+                    <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "In stock" : "Out of stock"}</div>
+                    {isProductInCart ? <>
+                        <Horizontal />
+                        <p className="mb-2 text-slate-500 flex items-center gap-1">
+                            <span>Product added to cart!</span>
+                        </p>
+                        <div className="max-w-[300px]">
+                            <Button label="View Cart" outline onClick={() => { router.push("/cart") }} />
+                        </div>
+                    </> : <>
+                        <Horizontal />
+                        <SetQuantity cartProduct={CartProduct} handleQtyIncrease={handleQtyIncrease} handleQtyDecrease={handleQtyDecrease} />
+                        <Horizontal />
+                        <div className="max-w-[300px]">
+                            <Button label="Add To Cart" onClick={() => handleAddProductToCart(CartProduct)} />
+                        </div>
+                    </>}
+                </div>
             </div>
-        </div>
-    
-    <Footer />
+
+            <Footer />
         </>
     )
 }

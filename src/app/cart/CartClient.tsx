@@ -23,7 +23,7 @@ const CartClient = () => {
     }
 
     return (
-        <div>
+        <div className="bg-slate-300 border-4 p-[20px] rounded-lg">
             <Heading title="Shopping Cart" center />
             <div className="grid grid-cols-5 text-xs gap-4 pb-2 items-center mt-8">
                 <div className="col-span-2 justify-self-start">Product</div>
