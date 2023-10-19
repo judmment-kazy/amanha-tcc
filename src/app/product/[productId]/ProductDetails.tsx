@@ -69,18 +69,18 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "In stock" : "Out of stock"}</div>
                     {isProductInCart ? <>
                         <Horizontal />
-                        <p className="mb-2 text-slate-500 flex items-center gap-1">
+                        <p className="mb-2 text-white flex items-center gap-1">
                             <span>Product added to cart!</span>
                         </p>
                         <div className="max-w-[300px]">
-                            <Button label="View Cart" outline onClick={() => { router.push("/cart") }} />
+                            <Button label="Ver seu Carrinho" outline onClick={() => { router.push("/cart") }} />
                         </div>
                     </> : <>
                         <Horizontal />
                         <SetQuantity cartProduct={CartProduct} handleQtyIncrease={handleQtyIncrease} handleQtyDecrease={handleQtyDecrease} />
                         <Horizontal />
                         <div className="max-w-[300px]">
-                            <Button label="Add To Cart" onClick={() => handleAddProductToCart(CartProduct)} />
+                            <Button label="Adicionar ao carrinho" onClick={() => handleAddProductToCart(CartProduct)} />
                         </div>
                     </>}
                 </div>
