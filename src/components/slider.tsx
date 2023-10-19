@@ -6,7 +6,6 @@ import { Mousewheel, Pagination, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css/pagination';
 import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog"
-import { MdCheckCircle } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
 
 const Slider = () => {
