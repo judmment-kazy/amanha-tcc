@@ -66,11 +66,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <div className="flex items-center gap-2"></div>
                     <Horizontal />
                     <div className="text-justify">{product.description}</div>
-                    <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "In stock" : "Out of stock"}</div>
+                    <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "Em estoque!" : "Fora de estoque!"}</div>
                     {isProductInCart ? <>
                         <Horizontal />
                         <p className="mb-2 text-white flex items-center gap-1">
-                            <span>Product added to cart!</span>
+                            <span>Produto adicionado ao carrinho!</span>
                         </p>
                         <div className="max-w-[300px]">
                             <Button label="Ver seu Carrinho" outline onClick={() => { router.push("/cart") }} />

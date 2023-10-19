@@ -45,10 +45,10 @@ const CartClient = () => {
                         <span>Subtotal</span>
                         <span>{formatPrice(cartTotalAmount)}</span>
                     </div>
-                    <p className="text-slate-500">Taxes and shipping calculate at checkout</p>
+                    <p className="text-white">Impostos e frete são calculados no Checkout</p>
                     <Button label="Checkout" onClick={() => { }} />
-                    <Link href={"/"} className="text-slate-500 flex items-center gap-1 mt-2">
-                        <span>Continue Shopping</span>
+                    <Link href={"/"} className="text-white flex items-center gap-1 mt-2">
+                        <span>Continue comprando</span>
                     </Link>
                 </div>
             </div>
