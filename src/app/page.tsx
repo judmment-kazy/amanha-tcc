@@ -1,7 +1,6 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import Slider from '@/components/slider'
-import { getCurrentUser } from '@/lib/session'
 import { products } from "../../utils/products";
 
 interface IPrams {
@@ -9,7 +8,6 @@ interface IPrams {
 }
 
 const Home = async ({ params }: { params: IPrams }) => {
-  const user = await getCurrentUser();
 
   const product = products.find((item) => item.id === params.productId)
 

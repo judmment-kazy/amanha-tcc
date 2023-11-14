@@ -16,6 +16,9 @@ const config: Config = {
       '2xl': '1536px',
     },
     extend: {
+      fontFamily: {
+        body: ['Manrope']
+      },
       colors:{
         'pink': '#ffc0cb',
         'cyan': '#add8e6',

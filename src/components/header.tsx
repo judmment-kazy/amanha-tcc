@@ -1,7 +1,9 @@
+
 import React, { useEffect } from 'react';
 import { Courgette } from 'next/font/google'
 import { ThemeButton } from '@/components/theme-button';
 import dynamic from 'next/dynamic';
+import { getCurrentUser } from '../../actions/getCurrentUser';
 
 const courgette = Courgette({
     subsets: ['latin'],
@@ -12,7 +14,10 @@ const Menu = dynamic(() => import('@/components/menu'), {
     ssr: false, // Impede o pré-carregamento do componente no servidor
 });
 
-export function Header() {
+export async function Header() {
+
+    const currentUser = await getCurrentUser()
+
     return (
         <div className='justify-center select-none'>
             <div className={courgette.className}>
@@ -51,7 +56,8 @@ export function Header() {
 
                             {/* Menu */}
                             <li>
-                                <Menu />
+                                {/*@ts-ignore*/}
+                                <Menu currentUser={currentUser} />
                             </li>
                         </ul>
                     </nav>}

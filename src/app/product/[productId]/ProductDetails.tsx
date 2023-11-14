@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import ProductImage from "@/components/products/ProductImage";
 import { Footer } from "@/components/footer";
-import { Headers } from "@/components/headers";
 import Menu from "@/components/menu";
 import { toast } from "@/components/ui/use-toast";
 import { Header } from "@/components/header";
@@ -60,7 +59,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
     return (
         <>
-            <Header />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-gradient-to-t from-cianinho to-rosinha my-[50px] p-[10px] py-[50px] rounded-2xl border-4 border-black dark:from-DarkMenuColor dark:to-DarkMenuColor">
                 <ProductImage cartProduct={CartProduct} product={product} />
                 <div className="flex flex-col gap-[25px] text-black-300 text-lg drop-shadow-[0px_5px_5px_rgba(0,0,0,0.3)]">
@@ -87,8 +85,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     </>}
                 </div>
             </div>
-
-            <Footer />
         </>
     )
 }

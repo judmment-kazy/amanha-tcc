@@ -57,7 +57,6 @@ const CartClient = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

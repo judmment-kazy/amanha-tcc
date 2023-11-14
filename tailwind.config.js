@@ -21,6 +21,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        nickname: ['Manrope']
+      },
       colors: {
         'DarkBgColor': '#191726',
         'DarkMenuColor': '#383a50',
