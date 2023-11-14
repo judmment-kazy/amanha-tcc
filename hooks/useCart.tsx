@@ -103,7 +103,7 @@ export const CartContextProvider = (props: Props) => {
     const handleCartQtyDecrease = useCallback((product: CartProductType) => {
         let updatedCart;
 
-        if (product.quantity === 1) {
+        if (product.quantity <= 1) {
             
             return toast({title: "Ooooops!", description: "Minimo de produtos no carrinho!", variant: "destructive",})
         }

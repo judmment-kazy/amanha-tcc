@@ -13,7 +13,6 @@ const Menu = dynamic(() => import('@/components/menu'), {
 });
 
 export function Header() {
-
     return (
         <div className='justify-center select-none'>
             <div className={courgette.className}>

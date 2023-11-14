@@ -9,6 +9,8 @@ import ProductImage from "@/components/products/ProductImage";
 import { Footer } from "@/components/footer";
 import { Headers } from "@/components/headers";
 import Menu from "@/components/menu";
+import { toast } from "@/components/ui/use-toast";
+import { Header } from "@/components/header";
 
 interface ProductDetailsProps {
     product: any
@@ -53,23 +55,23 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         })
     const router = useRouter();
 
-    const handleQtyIncrease = useCallback(() => { setCartProduct((prev) => { return { ...prev, quantity: prev.quantity + 1 } }); }, [CartProduct]);
-    const handleQtyDecrease = useCallback(() => { setCartProduct((prev) => { return { ...prev, quantity: prev.quantity - 1 } }); }, [CartProduct]);
+    const handleQtyIncrease = useCallback(() => { if(CartProduct.quantity === 99){return toast({title: "Ooooops!", description: "Maximo de produtos adicionados!", variant: "destructive",})} setCartProduct((prev) => { return { ...prev, quantity: prev.quantity + 1 } }); }, [CartProduct]);
+    const handleQtyDecrease = useCallback(() => { if(CartProduct.quantity === 1){return toast({title: "Ooooops!", description: "Minimo de produtos no carrinho!", variant: "destructive",})} setCartProduct((prev) => { return { ...prev, quantity: prev.quantity - 1 } }); }, [CartProduct]);
 
     return (
         <>
-            <Headers />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-slate-400 my-[50px] p-[10px] py-[50px] rounded-2xl border-4 ">
+            <Header />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-gradient-to-t from-cianinho to-rosinha my-[50px] p-[10px] py-[50px] rounded-2xl border-4 border-black dark:from-DarkMenuColor dark:to-DarkMenuColor">
                 <ProductImage cartProduct={CartProduct} product={product} />
-                <div className="flex flex-col gap-[25px] text-white text-lg">
-                    <h2 className="text-5xl font-bold text-white">{product.name}</h2>
+                <div className="flex flex-col gap-[25px] text-black-300 text-lg drop-shadow-[0px_5px_5px_rgba(0,0,0,0.3)]">
+                    <h2 className="text-5xl font-bold text-black-300">{product.name}</h2>
                     <div className="flex items-center gap-2"></div>
                     <Horizontal />
                     <div className="text-justify">{product.description}</div>
                     <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "Em estoque!" : "Fora de estoque!"}</div>
                     {isProductInCart ? <>
                         <Horizontal />
-                        <p className="mb-2 text-white flex items-center gap-1">
+                        <p className="mb-2 flex items-center gap-1">
                             <span>Produto adicionado ao carrinho!</span>
                         </p>
                         <div className="max-w-[300px]">
