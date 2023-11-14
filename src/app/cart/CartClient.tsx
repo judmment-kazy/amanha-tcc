@@ -27,7 +27,6 @@ const CartClient = () => {
 
     return (
         <>
-            <Header />
             <div className="bg-gradient-to-t from-cianinho to-rosinha dark:from-DarkMenuColor dark:to-DarkMenuColor p-[20px] rounded-lg  border-2 border-black">
                 <Heading title="Shopping Cart" center />
                 <div className="grid grid-cols-5 text-[25px] gap-4 pb-2 items-center mt-8">
