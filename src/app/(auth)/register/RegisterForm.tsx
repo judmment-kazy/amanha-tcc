@@ -70,14 +70,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
 
     return (
         <>
-            <Heading title="Cadastre-se em nossa loja aqui!" />
-            <Button outline label="Registre-se usando Google" icon={AiOutlineGoogle} onClick={() => {signIn('google')}} />
+            <Heading title="Faça seu Cadastro" />
             <hr className="bg-slate-300 w-full h-px" />
             <Input id="name" label="Nome" disabled={isLoading} register={register} errors={errors} required />
             <Input id="email" label="Email" disabled={isLoading} register={register} errors={errors} required />
             <Input id="password" label="Senha" disabled={isLoading} register={register} errors={errors} required type="password" />
-            <Button label={isLoading ? "Carregando" : "Registrar"} onClick={handleSubmit(onSubmit)} />
-            <p className="text-sm">Ja tem uma conta?{" "} <Link href='/login' className="underline">Faça Login</Link></p>
+            <p className="text-lg flex gap-1">Ja possui conta? <Link href='/register' className="underline text-brickwall">Faça Login</Link>ou<Link href='/' className="underline text-brickwall">Continue navegando</Link></p>            <Button label={isLoading ? "Carregando" : "Registrar"} onClick={handleSubmit(onSubmit)} />
         </>
     );
 }

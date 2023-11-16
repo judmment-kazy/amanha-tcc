@@ -19,15 +19,15 @@ const config: Config = {
       fontFamily: {
         body: ['Manrope']
       },
-      colors:{
+      colors: {
+        'bgcolor': '#f4f4f4',
+        'brickwall': '#c24832',
         'pink': '#ffc0cb',
         'cyan': '#add8e6',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-aah': 'linear-gradient(to bottom, hsl(350, 100%, 88%), #add8e6)'
+        'fundoPastel': "url('/fundoPastel.jpg')",
+        'stylish': "url('/stylish.png')",
       },
       dropShadow: {
         '3xl': '0px 10px 5px rgba(0, 0, 0, 0.4)'

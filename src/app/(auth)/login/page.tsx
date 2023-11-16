@@ -11,14 +11,14 @@ const Login = async() => {
 
     return ( 
         <>
-        <Header />
+        <div className="h-full w-full bg-brickwall bg-stylish py-[190px]">
         <Container>
             <FormWrap>
                 {/*@ts-ignore*/}
                 <LoginForm currentUser={currentUser} />
             </FormWrap>
         </Container>
-        <Footer />
+        </div>
         </>
      );
 }

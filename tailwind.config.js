@@ -6,30 +6,19 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        'xs': '430px',
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
+        "2xl": "1400px",
       },
     },
     extend: {
-      fontFamily: {
-        nickname: ['Manrope']
-      },
       colors: {
-        'DarkBgColor': '#191726',
-        'DarkMenuColor': '#383a50',
-        'DarkTextColor': '#eeeeee',
-        'rosinha': '#ffc2cc',
-        'cianinho': '#add8e6',
+        'bgcolor': '#f4f4f4',
+        'brickwall': '#c24832',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -69,6 +58,10 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        'fundoPastel': "url('/fundoPastel.jpg')",
+        'stylish': "url('/stylish.png')",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -83,16 +76,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        "gradient-aah": "linear-gradient(to bottom, hsl(350, 100%, 88%), #add8e6)",
-      },
-      dropShadow: {
-        '3xl': '0px 10px 5px rgba(0, 0, 0, 0.4)',
-      },
-      boxShadow: {
-        '3xl': '0 10px 100px -0px rgba(0, 0, 0, .7)',
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],
-} 
+}

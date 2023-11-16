@@ -61,13 +61,12 @@ const LoginForm: React.FC<LoginFormProps> = ({currentUser}) => {
 
     return ( 
         <>
-        <Heading title="Entre em sua conta aqui!" />
-        <Button outline label="Continue usando Google" icon={AiOutlineGoogle} onClick={() => {signIn('google')}} />
+        <Heading title="Faça Login" />
         <hr className="bg-slate-300 w-full h-px" />
         <Input id="email" label="Email" disabled={isLoading} register={register} errors={errors} required />
         <Input id="password" label="Senha" disabled={isLoading} register={register} errors={errors} required type="password" />
+        <p className="text-lg flex gap-1">Não tem uma conta ainda? <Link href='/register' className="underline text-brickwall">Registre-se</Link>ou<Link href='/' className="underline text-brickwall">Continue navegando</Link></p>
         <Button label={isLoading ? "Carregando" : "Entrar"} onClick={handleSubmit(onSubmit)} />
-        <p className="text-sm">Não possui uma conta?{" "} <Link href='/register' className="underline">Registre-se</Link></p>
         </>
     );
 }

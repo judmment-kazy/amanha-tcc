@@ -11,14 +11,14 @@ const Register = async() => {
 
     return ( 
     <>
-    <Header />
+    <div className="h-full w-full bg-brickwall bg-stylish py-[130px]">
     <Container>
         <FormWrap>
             {/*@ts-ignore*/}
             <RegisterForm currentUser={currentUser} />
         </FormWrap>
     </Container>
-    <Footer />
+    </div>
     </>
     );
 }

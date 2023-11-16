@@ -36,8 +36,8 @@ const Input: React.FC<InputProps> = ({
         transition 
         disabled:opacity-70 
         disabled:cursor-not-allowed 
-        ${errors[id] ? 'border-rose-400' : 'border-slate-300'} 
-        ${errors[id] ? 'focus:border-rose-400' : 'focus:border-slate-300'}`} 
+        ${errors[id] ? 'border-rose-400' : 'border-brickwall'} 
+        ${errors[id] ? 'focus:border-rose-400' : 'focus:bg-slate-100'}`} 
         />
         <label htmlFor={id} 
         className={`absolute 
@@ -54,7 +54,7 @@ const Input: React.FC<InputProps> = ({
         peer-placeholder-shown:translate-y-0 
         peer-focus:scale-75 
         peer-focus:-translate-y-4 
-        ${errors[id] ? 'text-rose-400' : 'text-slate-400'}`
+        ${errors[id] ? 'text-rose-400' : 'text-brickwall'}`
         }>{label}</label>
     </div>
      );

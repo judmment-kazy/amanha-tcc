@@ -6,11 +6,9 @@ import { Header } from "@/components/header";
 const Cart = () => {
     return(
         <div className="pt-8">
-            <Header />
             <Container>
                 <CartClient />
             </Container>
-            <Footer />
         </div>
     )
 }
