@@ -1,50 +1,74 @@
 export const products = [
     {
-        id: "64a654593e91b8e73a351e9f",
-        name: "Cone de Banana",
-        description: "Divertido cone trufado repleto de confeitos coloridos, uma experiência alegre e saborosa.",
-        price: 10,
+        id: "pdc",
+        name: "Pastel de carne",
+        description: "um pastel feito de carne moida",
+        price: 5,
         inStock: true,
-        image: "/cone_banana.png"
+        image: "/pastelDeCarne.jpg"
     },
     {
-        id: "64a654593e91b8e73a351e9a",
-        name: "Cone de Paçoca",
-        description: "Delicioso cone trufado de sabor irresistível de paçoca, uma combinação perfeita de texturas e sabores que encantará seu paladar.",
+        id: "pdq",
+        name: "Pastel de queijo",
+        description: "massa fina e crocante, é recheado com uma combinação deliciosa de  queijo derretido.",
         price: 10,
         inStock: true,
-        image: "/cone_pacoca.png"
+        image: "/pastel de queijo.webp"
     },
     {
-        id: "64a654593e91b8e73a351e9b",
-        name: "Cone de Confete",
-        description: "Divertido cone trufado repleto de confeitos coloridos, uma experiência alegre e saborosa.",
+        id: "pdf",
+        name: "Pastel de frango",
+        description: "pastel feito com frango desfiado.",
         price: 10,
         inStock: true,
-        image: "/cone_confete.png"
+        image: "/pastel de frango.jpg"
     },
     {
-        id: "64a654593e91b8e73a351e9c",
-        name: "Cone de Dois Amores",
-        description: "Delicioso cone trufado harmonizando chocolate preto e branco, uma fusão perfeita de sabores.",
+        id: "peq",
+        name: "Pastel de presunto e queijo",
+        description: "massa fina e crocante, é recheado com uma combinação deliciosa de presunto e queijo derretido.",
         price: 10,
         inStock: true,
-        image: "/cone_dois_amores.png"
+        image: "/presunto e queijo.jpg"
     },
     {
-        id: "64a654593e91b8e73a351e9d",
-        name: "Cone de Ninho com Nutella",
-        description: "Irresistível cone trufado cremoso com Nutella e creme de leite Ninho, uma tentação inigualável.",
-        price: 12,
+        id: "pchoco",
+        name: "Pastel doce",
+        description: "recheio chocolate creme de avelã.",
+        price: 8,
         inStock: true,
-        image: "/cone_ninho_nutella.png"
+        image: "/pastel de chocolate.jpg"
     },
     {
-        id: "64a654593e91b8e73a351e9e",
-        name: "Cone de Oreo",
-        description: "Um apetitoso cone trufado contendo um sabor inconfundível da bolacha Oreo, uma verdadeira delícia.",
+        id: "coca",
+        name: "refrigerante 1l",
+        description: "refrigerante para esfriar a mente nos dias mais quentes",
         price: 10,
         inStock: true,
-        image: "/cone_oreo.png"
+        image: "/coca cola 1l.png"
+    },
+    {
+        id: "am",
+        name: "agua mineral",
+        description: "bebida para hidratar seu corpo nos dias mais quentes",
+        price: 2,
+        inStock: true,
+        image: "/agua mineral.png"
+    },
+    {
+        id: "afl",
+        name: "Aquarius fresh limão 500ml",
+        description: "bebida para hidratar seu corpo nos dias mais quentes",
+        price: 6,
+        inStock: true,
+        image: "/Aquarius fresh limão 500ml.png"
+    },
+    {
+        id: "acg",
+        name: "agua com gás",
+        description: "bebida para hidratar seu corpo nos dias mais quentes",
+        price: 3.5,
+        inStock: true,
+        image: "/agua com gás.png"
     },
 ];

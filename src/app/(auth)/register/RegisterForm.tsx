@@ -75,7 +75,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
             <Input id="name" label="Nome" disabled={isLoading} register={register} errors={errors} required />
             <Input id="email" label="Email" disabled={isLoading} register={register} errors={errors} required />
             <Input id="password" label="Senha" disabled={isLoading} register={register} errors={errors} required type="password" />
-            <p className="text-lg flex gap-1">Ja possui conta? <Link href='/register' className="underline text-brickwall">Faça Login</Link>ou<Link href='/' className="underline text-brickwall">Continue navegando</Link></p>            <Button label={isLoading ? "Carregando" : "Registrar"} onClick={handleSubmit(onSubmit)} />
+            <p className="text-lg flex gap-1">Ja possui conta? <Link href='/login' className="underline text-brickwall">Faça Login</Link>ou<Link href='/' className="underline text-brickwall">Continue navegando</Link></p>            <Button label={isLoading ? "Carregando" : "Registrar"} onClick={handleSubmit(onSubmit)} />
         </>
     );
 }

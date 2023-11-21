@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 import AuthProvider from '@/components/ui/auth-provider'
 import CartProvider from '../../providers/CartProvider'
 import { Toaster } from '@/components/ui/toaster'
-import Container from '@/components/Container'
 
 const playfair = Playfair_Display({ subsets: ['latin'] })
 
@@ -24,7 +23,7 @@ export default async function RootLayout({
     <html lang="en" className={playfair.className}>
       <head>
         <script src="https://kit.fontawesome.com/cd773e3565.js"></script>
-        <link rel="icon" type="image/x-icon" href="/logo pro.png"></link>
+        <link rel="icon" type="image/x-icon" href="/fundoPastel.png"></link>
       </head>
       <body className='bg-gradient-to-b from-cianinho to-rosinha dark:from-DarkBgColor dark:to-DarkBgColor'>
           <CartProvider>

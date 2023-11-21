@@ -73,19 +73,19 @@ const Home = () => {
                 ['pdf','/pastel de frango.jpg', 'pastel_com_frango.png', 'Pastel de frango', 'pastel feito com frango desfiado.', "5,00"],
                 ['peq','/presunto e queijo.jpg', 'pastel_com_presunto_e_queijo.png', 'Pastel de presunto e queijo', 'massa fina e crocante, é recheado com uma combinação deliciosa de presunto e queijo derretido.', "5,00"],
               ].map(([id, img, img2, titulo, texto, valor], index) => (
-                <Popover>
+                <Popover key={index}>
                   <PopoverTrigger className='p-0 basis-0 grow-0 bg-white relative rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none'>
                     <div className="relative aspect-square h-full max-h-[200px] p-2 rounded-xl float-right">
                       <img src={img} className='aspect-square z-10 absolute left-0 top-0 h-full max-h-[200px] p-2 rounded-xl float-right hover:opacity-0 transition-all' />
                       <img src={img2} className='aspect-square absolute h-full left-0 top-0 max-h-[200px] p-2 rounded-xl float-right' />
                     </div>
-                    <h2 className='text-[2rem] font-black mb-[5px] px-[0.625rem] pt-[8px] text-2'>{titulo}</h2>
+                    <h2 className='text-[2rem] font-black mb-[5px] px-[0.625rem] pt-[8px] text-2 text-black'>{titulo}</h2>
                     <p className='pl-[10px] pb-[15px] mb-[2.5rem] text-[1.5rem] text-slate-600 whitespace-pre-line break-words'>{texto}</p>
                     <span className='absolute bottom-0 left-0 text-[1.5rem] font-[700] pb-[10px] px-[10px] text-[#909090] self-start'>POR:
                       <small className='pl-4 pb-[10px] px-[10px] text-[1.5rem] text-black'>R$: {valor}</small>
                     </span>
                   </PopoverTrigger>
-                  <PopoverContent className="bg-white rounded-xl shadow-md grid grid-cols-2 w-[720px] h-520px">
+                  <PopoverContent className="bg-white rounded-xl shadow-md grid grid-cols-2 w-[720px] h-520px text-black">
                     <div className='flex flex-col justify-center items-center border-r-2 border-slate-300'>
                       <h2 className='text-[1.5rem] font-black mb-[5px] px-[0.625rem] pt-[8px]'>{titulo}</h2>
                       <img src={img} className='max-h-[250px] aspect-auto p-2 rounded-xl float-right' />
@@ -120,10 +120,10 @@ const Home = () => {
             <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Doce</h1>
             <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start'>
               {[
-                ['/pastel de chocolate.jpg', 'pastel_de_chocolate.png', 'Pastel doce', 'recheio chocolate creme de avelã.', "8,00"],
-              ].map(([img, img2, titulo, texto, valor], index) => (
-                <Popover>
-                  <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none'>
+                ['pchoco','/pastel de chocolate.jpg', 'pastel_de_chocolate.png', 'Pastel doce', 'recheio chocolate creme de avelã.', "8,00"],
+              ].map(([id, img, img2, titulo, texto, valor], index) => (
+                <Popover key={index}>
+                  <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none text-black'>
                   <div className="relative aspect-square h-full max-h-[200px] p-2 rounded-xl float-right">
                       <img src={img} className='aspect-square z-10 absolute left-0 top-0 h-full max-h-[200px] p-2 rounded-xl float-right hover:opacity-0 transition-all' />
                       <img src={img2} className='aspect-square absolute h-full left-0 top-0 max-h-[200px] p-2 rounded-xl float-right' />
@@ -134,7 +134,7 @@ const Home = () => {
                       <small className='pl-4 pb-[10px] px-[10px] text-[1.5rem] text-black'>R$: {valor}</small>
                     </span>
                   </PopoverTrigger>
-                  <PopoverContent className="bg-white rounded-xl shadow-md grid grid-cols-2 w-[720px]">
+                  <PopoverContent className="bg-white rounded-xl shadow-md grid grid-cols-2 w-[720px] text-black">
                     <div className='flex flex-col justify-center items-center border-r-2 border-slate-300'>
                       <h2 className='text-[1.5rem] font-black mb-[5px] px-[0.625rem] pt-[8px]'>{titulo}</h2>
                       <img src={img} className='max-h-[250px] aspect-auto p-2 rounded-xl float-right' />
@@ -157,7 +157,7 @@ const Home = () => {
                         <h3>Utilize somente para observações.</h3>
                       </div>
                       <Textarea placeholder="Observação para produto" className="m-[5px] my-[10px]" />
-                      <button className='botao ml-[10px]'>Adicionar ao carrinho</button>
+                      <button className='botao ml-[10px]' onClick={() => handleAddToCart(id)}>Adicionar ao carrinho</button>
                     </div>
                   </PopoverContent>
                 </Popover>
@@ -170,10 +170,10 @@ const Home = () => {
             <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Refris</h1>
             <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start'>
               {[
-                ['/coca cola 1l.png', 'refrigerante 1l', '', '10,00'],
-              ].map(([img, titulo, texto, valor], index) => (
-                <Popover>
-                  <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none'>
+                ['coca','/coca cola 1l.png', 'refrigerante 1l', '', '10,00'],
+              ].map(([id, img, titulo, texto, valor], index) => (
+                <Popover key={index}>
+                  <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none text-black'>
                     <img src={img} className='aspect-square h-full max-h-[200px] p-2 rounded-xl float-right' />
                     <h2 className='text-[2rem] font-black mb-[5px] px-[0.625rem] pt-[8px] text-2'>{titulo}</h2>
                     <p className='pl-[10px] pb-[15px] mb-[2.5rem] text-[1.5rem] text-slate-600 whitespace-pre-line break-words'>{texto}</p>
@@ -181,7 +181,7 @@ const Home = () => {
                       <small className='pl-4 pb-[10px] px-[10px] text-[1.5rem] text-black'>R$: {valor}</small>
                     </span>
                   </PopoverTrigger>
-                  <PopoverContent className="bg-white rounded-xl shadow-md grid grid-cols-2 w-[720px]">
+                  <PopoverContent className="bg-white rounded-xl shadow-md grid grid-cols-2 w-[720px] text-black">
                     <div className='flex flex-col justify-center items-center border-r-2 border-slate-300'>
                       <h2 className='text-[1.5rem] font-black mb-[5px] px-[0.625rem] pt-[8px]'>{titulo}</h2>
                       <img src={img} className='max-h-[250px] aspect-auto p-2 rounded-xl float-right' />
@@ -194,7 +194,7 @@ const Home = () => {
 
 
 
-                      <button className='botao ml-[10px]'>Adicionar ao carrinho</button>
+                      <button className='botao ml-[10px]' onClick={() => handleAddToCart(id)}>Adicionar ao carrinho</button>
                     </div>
                   </PopoverContent>
                 </Popover>
@@ -204,13 +204,13 @@ const Home = () => {
 
           <div id="aguas" className='h-full bg-center flex flex-col text-center pb-[50px]'>
             <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Águas</h1>
-            <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start'>
+            <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start text-black'>
               {[
-                ['/agua mineral.png', 'agua mineral', '', '2,00'],
-                ['/Aquarius fresh limão 500ml.png', 'Aquarius fresh limão 500ml', '', '6,00'],
-                ['/agua com gás.png', 'agua com gás', '', '3,50'],
-              ].map(([img, titulo, texto, valor], index) => (
-                <Popover>
+                ['am','/agua mineral.png', 'agua mineral', '', '2,00'],
+                ['afl','/Aquarius fresh limão 500ml.png', 'Aquarius fresh limão 500ml', '', '6,00'],
+                ['acg','/agua com gás.png', 'agua com gás', '', '3,50'],
+              ].map(([id, img, titulo, texto, valor], index) => (
+                <Popover key={index}>
                   <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none'>
                     <img src={img} className='aspect-square h-full max-h-[200px] p-2 rounded-xl float-right' />
                     <h2 className='text-[2rem] font-black mb-[5px] px-[0.625rem] pt-[8px] text-2'>{titulo}</h2>
@@ -228,13 +228,8 @@ const Home = () => {
                     <div className='flex flex-col scale-90'>
                       <h2 className='text-[1.5rem] font-black mb-[15px] px-[0.625rem] pt-[8px] self-center'>FAÇA SEU PEDIDO</h2>
                       <div className='pl-[10px] ml-[10px] bg-slate-200 mb-[70px]'>
-
-
                       </div>
-
-
-
-                      <button className='botao ml-[10px] '>Adicionar ao carrinho</button>
+                      <button className='botao ml-[10px] ' onClick={() => handleAddToCart(id)}>Adicionar ao carrinho</button>
                     </div>
                   </PopoverContent>
                 </Popover>

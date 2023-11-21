@@ -9,7 +9,7 @@ interface SetQtyProps{
     handleQtyDecrease: () => void;
 }
 
-const btnStyles = 'border-[1.5px] border-black text-black dark:border-white dark:text-white px-2 rounded bg-slate-200 bg-gradient-to-t from-cianinho to-rosinha my-[50px] dark:from-DarkMenuColor dark:to-DarkMenuColor';
+const btnStyles = 'border-[1.5px] border-black text-black dark:border-white dark:text-white px-2 rounded-full bg-brickwall text-white bg-gradient-to-t from-cianinho to-rosinha my-[50px] dark:from-DarkMenuColor dark:to-DarkMenuColor';
 
 const SetQuantity: React.FC<SetQtyProps> = ({cartCounter, cartProduct, handleQtyIncrease, handleQtyDecrease}) => {
     return(
