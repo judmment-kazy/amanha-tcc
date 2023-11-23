@@ -44,7 +44,7 @@ const Home = () => {
           {/*@ts-ignore*/}
           <Menuzinho />
         </div>
-        <h1 className='text-white text-5rem'>Cárdapio</h1>
+        <h1 className='text-white text-5rem'>Cardápio</h1>
       </div>
       {/* conteudo principal */}
       <div className='w-screen flex flex-wrap justify-center bg-brickwall bg-stylish pt-5'>
@@ -59,7 +59,7 @@ const Home = () => {
             <a href='#refri' className='w-full h-full flex justify-center items-center align-middle text-center hover:text-slate-900'>Refri</a>
           </div>
           <div className='h-full w-full flex justify-center items-center transition-all duration-150 hover:bg-slate-100 hover:cursor-pointer hover:text-[2.3rem]'>
-            <a href='#aguas' className='w-full h-full flex justify-center items-center align-middle text-center hover:text-slate-900'>Àguas</a>
+            <a href='#aguas' className='w-full h-full flex justify-center items-center align-middle text-center hover:text-slate-900'>Águas</a>
           </div>
         </div>
 
@@ -68,10 +68,10 @@ const Home = () => {
             <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Pasteis</h1>
             <div className='p-0 mb-[50px] m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start'>
               {[
-                ['pdc','/pastelDeCarne.jpg', 'pastel_com_carne.png', 'Pastel de carne', 'um pastel feito de carne moida', "5,00"],
-                ['pdq','/pastel de queijo.webp', 'pastel de queijo.png', 'Pastel de queijo', 'massa fina e crocante, é recheado com uma combinação deliciosa de  queijo derretido.', "5,00"],
-                ['pdf','/pastel de frango.jpg', 'pastel_com_frango.png', 'Pastel de frango', 'pastel feito com frango desfiado.', "5,00"],
-                ['peq','/presunto e queijo.jpg', 'pastel_com_presunto_e_queijo.png', 'Pastel de presunto e queijo', 'massa fina e crocante, é recheado com uma combinação deliciosa de presunto e queijo derretido.', "5,00"],
+                ['pdc','/pastelDeCarne.jpg', 'pastel_com_carne.png', 'Pastel de carne', 'Pastel recheado de carne moida.', "5,00"],
+                ['pdq','/pastel de queijo.webp', 'pastel de queijo.png', 'Pastel de queijo', 'Pastel recheado com queijo derretido.', "5,00"],
+                ['pdf','/pastel de frango.jpg', 'pastel_com_frango.png', 'Pastel de frango', 'Pastel recheado com frango desfiado.', "5,00"],
+                ['peq','/presunto e queijo.jpg', 'pastel_com_presunto_e_queijo.png', 'Pastel de presunto e queijo', 'Pastel recheado com uma combinação deliciosa de presunto e queijo derretido.', "5,00"],
               ].map(([id, img, img2, titulo, texto, valor], index) => (
                 <Popover key={index}>
                   <PopoverTrigger className='p-0 basis-0 grow-0 bg-white relative rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none'>
@@ -94,14 +94,11 @@ const Home = () => {
                     <div className='flex flex-col scale-90'>
                       <h2 className='text-[1.5rem] font-black mb-[15px] px-[0.625rem] pt-[8px] self-center'>FAÇA SEU PEDIDO</h2>
                       <div className='pl-[10px] ml-[10px] bg-slate-200'>
-                        <h2 className='text-[1.5rem] font-black'>Adicionais</h2>
-                        <h3 className=''>Quer algum adicional?</h3>
+                        <h2 className='text-[1.5rem] font-black'></h2>
+                        <h3 className=''></h3>
                       </div>
                       <div className='mt-[25px] ml-[10px] text-[20px]'>
-                        bacon +<br />
-                        ovo +<br />
-                        calabresa +<br />
-                        milho +<br />
+            
                       </div>
                       <div className='pl-[10px] mt-[25px] ml-[10px] bg-slate-200'>
                         <h2 className='text-[1.5rem] font-black'>Observação</h2>
@@ -120,7 +117,7 @@ const Home = () => {
             <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Doce</h1>
             <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start'>
               {[
-                ['pchoco','/pastel de chocolate.jpg', 'pastel_de_chocolate.png', 'Pastel doce', 'recheio chocolate creme de avelã.', "8,00"],
+                ['pchoco','/pastel de chocolate.jpg', 'pastel_de_chocolate.png', 'Pastel doce', 'Pastel recheiado com chocolate e creme de avelã.', "8,00"],
               ].map(([id, img, img2, titulo, texto, valor], index) => (
                 <Popover key={index}>
                   <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none text-black'>
@@ -143,14 +140,11 @@ const Home = () => {
                     <div className='flex flex-col scale-90'>
                       <h2 className='text-[1.5rem] font-black mb-[15px] px-[0.625rem] pt-[8px] self-center'>FAÇA SEU PEDIDO</h2>
                       <div className='pl-[10px] ml-[10px] bg-slate-200'>
-                        <h2 className='text-[1.5rem] font-black'>Adicionais</h2>
-                        <h3 className=''>Quer algum adicional?</h3>
+                        <h2 className='text-[1.5rem] font-black'></h2>
+                        <h3 className=''></h3>
                       </div>
                       <div className='mt-[25px] ml-[10px] text-[20px]'>
-                        canela +<br />
-                        morango +<br />
-                        banana +<br />
-                        dois amores + <br />
+                      
                       </div>
                       <div className='pl-[10px] mt-[25px] ml-[10px] bg-slate-200'>
                         <h2 className='text-[1.5rem] font-black'>Observação</h2>
@@ -167,10 +161,10 @@ const Home = () => {
           </div>
 
           <div id="refri" className='h-full bg-center flex flex-col text-center pb-[50px]'>
-            <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Refris</h1>
+            <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Refrigerante</h1>
             <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start'>
               {[
-                ['coca','/coca cola 1l.png', 'refrigerante 1l', '', '10,00'],
+                ['coca','/coca cola 1l.png', 'Refrigerante Coca-Cola 1l', '', '10,00'],
               ].map(([id, img, titulo, texto, valor], index) => (
                 <Popover key={index}>
                   <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none text-black'>
@@ -206,9 +200,9 @@ const Home = () => {
             <h1 className='text-black text-[3rem] pb-2 font-black tracking-wide select-none'>Águas</h1>
             <div className='p-0 m-0 h-full w-[90dvw] grid grid-cols-2 gap-[30px] justify-center text-start text-black'>
               {[
-                ['am','/agua mineral.png', 'agua mineral', '', '2,00'],
+                ['am','/agua mineral.png', 'Água mineral', '', '2,00'],
                 ['afl','/Aquarius fresh limão 500ml.png', 'Aquarius fresh limão 500ml', '', '6,00'],
-                ['acg','/agua com gás.png', 'agua com gás', '', '3,50'],
+                ['acg','/agua com gás.png', 'Água com gás', '', '3,50'],
               ].map(([id, img, titulo, texto, valor], index) => (
                 <Popover key={index}>
                   <PopoverTrigger className='p-0 basis-0 grow-0 relative bg-white rounded-xl shadow-md hover:shadow-2xl cursor-pointer select-none'>
